@@ -28,9 +28,9 @@ SECRET_KEY = getenv('SECRET_KEY', 'SECRET_KEY')
 DEBUG = getenv('DEBUG', 0)
 
 ALLOWED_HOSTS = getenv('ALLOWED_HOSTS', '*').split(' ')
-# SESSION_COOKIE_SECURE = True
-# CSRF_COOKIE_SECURE = True
-# SECURE_SSL_REDIRECT = True
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
+SECURE_SSL_REDIRECT = True
 
 # Application definition
 
