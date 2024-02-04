@@ -1,0 +1,566 @@
+[
+{
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+        "action_time": "2023-09-03T14:30:24.547Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "e2f8b437-a038-46d6-a127-f6ccfeb1c1a7",
+        "object_repr": "<Category Кроссовки>",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+        "action_time": "2023-09-03T14:30:31.015Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "dd7c963e-4a7c-4264-899a-8be29c045d4b",
+        "object_repr": "<Category Футболки>",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+        "action_time": "2023-09-03T14:32:46.948Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "d875b8b9-80fc-4026-bb47-4ab8a0eb1345",
+        "object_repr": "<Product Кроссовки New Balance 237>",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"attachment\", \"object\": \"<Attachment d4b3a129-21e9-474a-b2c2-584056b970c6>\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+        "action_time": "2023-09-03T14:43:33.423Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "d4b3a129-21e9-474a-b2c2-584056b970c6",
+        "object_repr": "<Attachment d4b3a129-21e9-474a-b2c2-584056b970c6>",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+        "action_time": "2023-09-03T14:43:45.707Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "d875b8b9-80fc-4026-bb47-4ab8a0eb1345",
+        "object_repr": "<Product Кроссовки New Balance 237>",
+        "action_flag": 2,
+        "change_message": "[{\"added\": {\"name\": \"attachment\", \"object\": \"<Attachment d619b490-d747-4faa-89de-6beeb2422112>\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+        "action_time": "2023-09-03T14:44:38.273Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "d619b490-d747-4faa-89de-6beeb2422112",
+        "object_repr": "<Attachment d619b490-d747-4faa-89de-6beeb2422112>",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+        "action_time": "2023-09-03T14:44:46.108Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "d875b8b9-80fc-4026-bb47-4ab8a0eb1345",
+        "object_repr": "<Product Кроссовки New Balance 237>",
+        "action_flag": 2,
+        "change_message": "[{\"added\": {\"name\": \"attachment\", \"object\": \"<Attachment 11cfe493-63d3-4d92-88c4-bda4732707c6>\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+        "action_time": "2023-09-03T14:45:32.356Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "11cfe493-63d3-4d92-88c4-bda4732707c6",
+        "object_repr": "<Attachment 11cfe493-63d3-4d92-88c4-bda4732707c6>",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+        "action_time": "2023-09-03T14:45:40.287Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "d875b8b9-80fc-4026-bb47-4ab8a0eb1345",
+        "object_repr": "<Product Кроссовки New Balance 237>",
+        "action_flag": 2,
+        "change_message": "[{\"added\": {\"name\": \"attachment\", \"object\": \"<Attachment 5da758ff-b162-4bee-b38b-1ef7e140f846>\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+        "action_time": "2023-09-03T14:48:49.282Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "5da758ff-b162-4bee-b38b-1ef7e140f846",
+        "object_repr": "<Attachment 5da758ff-b162-4bee-b38b-1ef7e140f846>",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+        "action_time": "2023-09-03T14:48:57.657Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "d875b8b9-80fc-4026-bb47-4ab8a0eb1345",
+        "object_repr": "<Product Кроссовки New Balance 237>",
+        "action_flag": 2,
+        "change_message": "[{\"added\": {\"name\": \"attachment\", \"object\": \"<Attachment ccd1a51c-57e9-46c2-949e-b453e136f339>\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+        "action_time": "2023-09-03T14:54:00.563Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "ccd1a51c-57e9-46c2-949e-b453e136f339",
+        "object_repr": "<Attachment ccd1a51c-57e9-46c2-949e-b453e136f339>",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"File\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 13,
+    "fields": {
+        "action_time": "2023-09-03T14:54:07.037Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "ccd1a51c-57e9-46c2-949e-b453e136f339",
+        "object_repr": "<Attachment ccd1a51c-57e9-46c2-949e-b453e136f339>",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"File\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 14,
+    "fields": {
+        "action_time": "2023-09-03T14:54:54.666Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "f96f519d-50b6-4132-b412-8fed608a50e7",
+        "object_repr": "<Category Рюкзаки>",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 15,
+    "fields": {
+        "action_time": "2023-09-03T14:57:47.518Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "027741e3-60fd-48f8-a4c3-f85e71e34fe7",
+        "object_repr": "<Product Рюкзак Dickies Logo>",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"attachment\", \"object\": \"<Attachment 807c8b35-60f4-4a75-a38d-29334a81ead0>\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 16,
+    "fields": {
+        "action_time": "2023-09-03T14:59:32.875Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "5c06887e-40ec-4bfa-9520-74b2b8159863",
+        "object_repr": "<Product Футболка Jordan>",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"attachment\", \"object\": \"<Attachment 28b1acc5-3243-4187-94e4-26c806f25b16>\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 17,
+    "fields": {
+        "action_time": "2023-09-03T15:00:16.417Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "f7bde622-1f6c-48c4-9dee-c1160c4a5e3b",
+        "object_repr": "<Product Кеды Nike Blazer Jumbo>",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"attachment\", \"object\": \"<Attachment e3adf651-61b1-4ebc-9522-806c4a8e0ddf>\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 18,
+    "fields": {
+        "action_time": "2023-09-03T15:00:58.189Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "f0cf1abc-e07a-451f-9487-41fba8e6f0b1",
+        "object_repr": "<Product Кроссовки Nike Air Force 1 Mid React Neon>",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"attachment\", \"object\": \"<Attachment e5c20423-ce7c-4ba0-8cf2-cadffdd6ac28>\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 19,
+    "fields": {
+        "action_time": "2023-09-03T15:02:01.787Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "1ae12265-2b8a-4f8e-a8c0-947cb033fd91",
+        "object_repr": "<Product Свитшот Thrasher>",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"attachment\", \"object\": \"<Attachment d42f144b-0cd6-4845-9288-98de3886a85a>\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 20,
+    "fields": {
+        "action_time": "2023-09-03T15:02:40.385Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "d42f144b-0cd6-4845-9288-98de3886a85a",
+        "object_repr": "<Attachment d42f144b-0cd6-4845-9288-98de3886a85a>",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"File\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 21,
+    "fields": {
+        "action_time": "2023-09-03T15:03:33.216Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "d25ab6a9-0528-45aa-a090-2f56dbc60127",
+        "object_repr": "<Product Кроссовки New Balance 997>",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"attachment\", \"object\": \"<Attachment 2e0dcf2d-3615-4375-91b1-55511d7c8177>\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 22,
+    "fields": {
+        "action_time": "2023-09-03T15:04:19.394Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "07388475-35fa-4f5b-bad1-70b71d24fab0",
+        "object_repr": "<Product Nike Shoebox Bag>",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"attachment\", \"object\": \"<Attachment 28ce0d57-bbf3-4dbc-be82-8c7cd088289e>\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 23,
+    "fields": {
+        "action_time": "2023-09-03T15:04:55.343Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "3e6a5878-25a5-464e-891f-2a5172377448",
+        "object_repr": "<Product Кроссовки Nike Air Monarch>",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"attachment\", \"object\": \"<Attachment 296947e5-1613-4a81-8dea-5659cd140f7c>\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 24,
+    "fields": {
+        "action_time": "2023-09-03T15:12:03.288Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "1",
+        "object_repr": "<Stock <Product Свитшот Thrasher> - 5>",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$600000$4teOw1M3D5Am9LvoWJfUH9$uH1YPtsnKsjX+t7gwFmHj4KQihEmkQJYSpY0Hd9hVIE=",
+        "last_login": "2023-11-13T08:17:23.928Z",
+        "is_superuser": true,
+        "username": "root",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2023-09-03T14:18:42.639Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "akv96hf5d852ar2yis0hl23k9ny1y25k",
+    "fields": {
+        "session_data": ".eJxVjMsOwiAQRf-FtSEzdAjg0r3fQHgMUjWQlHZl_Hdt0oVu7znnvoQP21r9NnjxcxZngeL0u8WQHtx2kO-h3bpMva3LHOWuyIMOee2Zn5fD_TuoYdRvbcgpYLbOIuUSC5IGmpxWEzmEBGBVTkZFZtDBRmU0uVKIGU3UCVC8P7liNxA:1qcnwN:yZfJsbc7M2IW6rPbolDHCU8F-j65yQg9uyfDXcbR2WY",
+        "expire_date": "2023-09-17T14:19:03.371Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "rfa439iz776gdmpy9158jde4nh2y4n6k",
+    "fields": {
+        "session_data": ".eJxVjMsOwiAQRf-FtSEzdAjg0r3fQHgMUjWQlHZl_Hdt0oVu7znnvoQP21r9NnjxcxZngeL0u8WQHtx2kO-h3bpMva3LHOWuyIMOee2Zn5fD_TuoYdRvbcgpYLbOIuUSC5IGmpxWEzmEBGBVTkZFZtDBRmU0uVKIGU3UCVC8P7liNxA:1r2S8J:E_otSyJ2CHvGb-SED3__Sgzl7rmCufrZ8HvGz0fSrCU",
+        "expire_date": "2023-11-27T08:17:23.932Z"
+    }
+},
+{
+    "model": "Catalog.category",
+    "pk": "dd7c963e-4a7c-4264-899a-8be29c045d4b",
+    "fields": {
+        "name": "Футболки"
+    }
+},
+{
+    "model": "Catalog.category",
+    "pk": "e2f8b437-a038-46d6-a127-f6ccfeb1c1a7",
+    "fields": {
+        "name": "Кроссовки"
+    }
+},
+{
+    "model": "Catalog.category",
+    "pk": "f96f519d-50b6-4132-b412-8fed608a50e7",
+    "fields": {
+        "name": "Рюкзаки"
+    }
+},
+{
+    "model": "Catalog.attachment",
+    "pk": "28b1acc5-3243-4187-94e4-26c806f25b16",
+    "fields": {
+        "file": "attachments/1XjEIMv2b-M.jpg",
+        "product": "5c06887e-40ec-4bfa-9520-74b2b8159863"
+    }
+},
+{
+    "model": "Catalog.attachment",
+    "pk": "28ce0d57-bbf3-4dbc-be82-8c7cd088289e",
+    "fields": {
+        "file": "attachments/Tesnk2on1d0.jpg",
+        "product": "07388475-35fa-4f5b-bad1-70b71d24fab0"
+    }
+},
+{
+    "model": "Catalog.attachment",
+    "pk": "296947e5-1613-4a81-8dea-5659cd140f7c",
+    "fields": {
+        "file": "attachments/4WWrBnzPodc.jpg",
+        "product": "3e6a5878-25a5-464e-891f-2a5172377448"
+    }
+},
+{
+    "model": "Catalog.attachment",
+    "pk": "2e0dcf2d-3615-4375-91b1-55511d7c8177",
+    "fields": {
+        "file": "attachments/QmmfIxzKjyU.jpg",
+        "product": "d25ab6a9-0528-45aa-a090-2f56dbc60127"
+    }
+},
+{
+    "model": "Catalog.attachment",
+    "pk": "807c8b35-60f4-4a75-a38d-29334a81ead0",
+    "fields": {
+        "file": "attachments/xKEHiCSsfJk.jpg",
+        "product": "027741e3-60fd-48f8-a4c3-f85e71e34fe7"
+    }
+},
+{
+    "model": "Catalog.attachment",
+    "pk": "ccd1a51c-57e9-46c2-949e-b453e136f339",
+    "fields": {
+        "file": "attachments/C3PxOSNu9cM_3HCXo8z.jpg",
+        "product": "d875b8b9-80fc-4026-bb47-4ab8a0eb1345"
+    }
+},
+{
+    "model": "Catalog.attachment",
+    "pk": "d42f144b-0cd6-4845-9288-98de3886a85a",
+    "fields": {
+        "file": "attachments/7ee5cOmyQ44.jpg",
+        "product": "1ae12265-2b8a-4f8e-a8c0-947cb033fd91"
+    }
+},
+{
+    "model": "Catalog.attachment",
+    "pk": "e3adf651-61b1-4ebc-9522-806c4a8e0ddf",
+    "fields": {
+        "file": "attachments/gOXQTxnxh0w.jpg",
+        "product": "f7bde622-1f6c-48c4-9dee-c1160c4a5e3b"
+    }
+},
+{
+    "model": "Catalog.attachment",
+    "pk": "e5c20423-ce7c-4ba0-8cf2-cadffdd6ac28",
+    "fields": {
+        "file": "attachments/vIvLJ_kr8bo.jpg",
+        "product": "f0cf1abc-e07a-451f-9487-41fba8e6f0b1"
+    }
+},
+{
+    "model": "Catalog.product",
+    "pk": "027741e3-60fd-48f8-a4c3-f85e71e34fe7",
+    "fields": {
+        "name": "Рюкзак Dickies Logo",
+        "description": "Доставка из зарубежных магазинов за 10-20 дней!\r\n\r\nНовый товар, полный комплект, сертификат оригинальности и чек!\r\n\r\nРазмеры : 42*30*12см\r\n\r\nНе нашли свой? Уточняйте в лс!\r\n\r\nСтоимость : 3490\r\n\r\n#подзаказ #оригинал #одежда #обувь #аксессуары\r\n\r\nПодписывайтесь на группу, участвуйте в программе лояльности!\r\nhttps://vk.com/misslemoscow\r\n\r\nОтзывы наших клиентов\r\nhttps://vk.com/topic-193409408_41091550\r\n\r\nВ нашем магазине только оригинальный товар!",
+        "article": "DK010531C491",
+        "barcode": null,
+        "category": "f96f519d-50b6-4132-b412-8fed608a50e7",
+        "created_at": "2023-11-13T13:00:16.712Z",
+        "updated_at": "2023-11-13T13:00:16.716Z"
+    }
+},
+{
+    "model": "Catalog.product",
+    "pk": "07388475-35fa-4f5b-bad1-70b71d24fab0",
+    "fields": {
+        "name": "Nike Shoebox Bag",
+        "description": "Сумка-рюкзак, вместит пару обуви. \r\nУнисекс.\r\nРазмер 35*23*12см",
+        "article": null,
+        "barcode": null,
+        "category": "f96f519d-50b6-4132-b412-8fed608a50e7",
+        "created_at": "2023-11-13T13:00:16.712Z",
+        "updated_at": "2023-11-13T13:00:16.716Z"
+    }
+},
+{
+    "model": "Catalog.product",
+    "pk": "1ae12265-2b8a-4f8e-a8c0-947cb033fd91",
+    "fields": {
+        "name": "Свитшот Thrasher",
+        "description": "О нет, почему мой парень не скейтер? Размеры S-XL",
+        "article": null,
+        "barcode": null,
+        "category": "dd7c963e-4a7c-4264-899a-8be29c045d4b",
+        "created_at": "2023-11-13T13:00:16.712Z",
+        "updated_at": "2023-11-13T13:00:16.716Z"
+    }
+},
+{
+    "model": "Catalog.product",
+    "pk": "3e6a5878-25a5-464e-891f-2a5172377448",
+    "fields": {
+        "name": "Кроссовки Nike Air Monarch",
+        "description": "Даже не нуждаются в представлении, но они ещё живы\r\nРазмеры: 38-46.",
+        "article": null,
+        "barcode": null,
+        "category": "e2f8b437-a038-46d6-a127-f6ccfeb1c1a7",
+        "created_at": "2023-11-13T13:00:16.712Z",
+        "updated_at": "2023-11-13T13:00:16.716Z"
+    }
+},
+{
+    "model": "Catalog.product",
+    "pk": "5c06887e-40ec-4bfa-9520-74b2b8159863",
+    "fields": {
+        "name": "Футболка Jordan",
+        "description": "Доставка из зарубежных магазинов за 10-20 дней!\r\n\r\nНовый товар, полный комплект, сертификат оригинальности и чек!\r\n\r\nРазмеры : 42*30*12см\r\n\r\nНе нашли свой? Уточняйте в лс!\r\n\r\nСтоимость : 3490\r\n\r\n#подзаказ #оригинал #одежда #обувь #аксессуары\r\n\r\nПодписывайтесь на группу, участвуйте в программе лояльности!\r\nhttps://vk.com/misslemoscow\r\n\r\nОтзывы наших клиентов\r\nhttps://vk.com/topic-193409408_41091550\r\n\r\nВ нашем магазине только оригинальный товар!",
+        "article": null,
+        "barcode": null,
+        "category": "dd7c963e-4a7c-4264-899a-8be29c045d4b",
+        "created_at": "2023-11-13T13:00:16.712Z",
+        "updated_at": "2023-11-13T13:00:16.716Z"
+    }
+},
+{
+    "model": "Catalog.product",
+    "pk": "d25ab6a9-0528-45aa-a090-2f56dbc60127",
+    "fields": {
+        "name": "Кроссовки New Balance 997",
+        "description": "Размеры: 37-45",
+        "article": null,
+        "barcode": null,
+        "category": "e2f8b437-a038-46d6-a127-f6ccfeb1c1a7",
+        "created_at": "2023-11-13T13:00:16.712Z",
+        "updated_at": "2023-11-13T13:00:16.716Z"
+    }
+},
+{
+    "model": "Catalog.product",
+    "pk": "d875b8b9-80fc-4026-bb47-4ab8a0eb1345",
+    "fields": {
+        "name": "Кроссовки New Balance 237",
+        "description": "Доставка из зарубежных магазинов за 10-20 дней!\r\n\r\nНовый товар, полный комплект, сертификат оригинальности и чек!\r\n\r\nРазмеры : 36-45\r\n\r\nНе нашли свой? Уточняйте в лс!\r\n\r\nСтоимость : 8990\r\n\r\n#подзаказ #оригинал #одежда #обувь #аксессуары\r\n\r\nПодписывайтесь на группу, участвуйте в программе лояльности!\r\nhttps://vk.com/misslemoscow\r\n\r\nОтзывы наших клиентов\r\nhttps://vk.com/topic-193409408_41091550\r\n\r\nВ нашем магазине только оригинальный товар!",
+        "article": "MS237SC",
+        "barcode": null,
+        "category": "e2f8b437-a038-46d6-a127-f6ccfeb1c1a7",
+        "created_at": "2023-11-13T13:00:16.712Z",
+        "updated_at": "2023-11-13T13:00:16.716Z"
+    }
+},
+{
+    "model": "Catalog.product",
+    "pk": "f0cf1abc-e07a-451f-9487-41fba8e6f0b1",
+    "fields": {
+        "name": "Кроссовки Nike Air Force 1 Mid React Neon",
+        "description": "Доставка из зарубежных магазинов за 10-20 дней!\r\n\r\nНовый товар, полный комплект, сертификат оригинальности и чек!\r\n\r\nРазмеры : 42*30*12см\r\n\r\nНе нашли свой? Уточняйте в лс!\r\n\r\nСтоимость : 3490\r\n\r\n#подзаказ #оригинал #одежда #обувь #аксессуары\r\n\r\nПодписывайтесь на группу, участвуйте в программе лояльности!\r\nhttps://vk.com/misslemoscow\r\n\r\nОтзывы наших клиентов\r\nhttps://vk.com/topic-193409408_41091550\r\n\r\nВ нашем магазине только оригинальный товар!",
+        "article": null,
+        "barcode": null,
+        "category": "e2f8b437-a038-46d6-a127-f6ccfeb1c1a7",
+        "created_at": "2023-11-13T13:00:16.712Z",
+        "updated_at": "2023-11-13T13:00:16.716Z"
+    }
+},
+{
+    "model": "Catalog.product",
+    "pk": "f7bde622-1f6c-48c4-9dee-c1160c4a5e3b",
+    "fields": {
+        "name": "Кеды Nike Blazer Jumbo",
+        "description": "Доставка из зарубежных магазинов за 10-20 дней!\r\n\r\nНовый товар, полный комплект, сертификат оригинальности и чек!\r\n\r\nРазмеры : 42*30*12см\r\n\r\nНе нашли свой? Уточняйте в лс!\r\n\r\nСтоимость : 3490\r\n\r\n#подзаказ #оригинал #одежда #обувь #аксессуары\r\n\r\nПодписывайтесь на группу, участвуйте в программе лояльности!\r\nhttps://vk.com/misslemoscow\r\n\r\nОтзывы наших клиентов\r\nhttps://vk.com/topic-193409408_41091550\r\n\r\nВ нашем магазине только оригинальный товар!",
+        "article": null,
+        "barcode": null,
+        "category": "e2f8b437-a038-46d6-a127-f6ccfeb1c1a7",
+        "created_at": "2023-11-13T13:00:16.712Z",
+        "updated_at": "2023-11-13T13:00:16.716Z"
+    }
+},
+{
+    "model": "Catalog.stock",
+    "pk": 1,
+    "fields": {
+        "product": "1ae12265-2b8a-4f8e-a8c0-947cb033fd91",
+        "quantity": 5
+    }
+}
+]

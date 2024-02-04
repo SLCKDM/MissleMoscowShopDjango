@@ -1,0 +1,14 @@
+{% load static %}
+<head>
+    <title>{{product.name}}</title>
+    <link rel="stylesheet" href="{% static 'Front/catalog.css' %}">
+    <div class="name">{{ product.name }}</div>
+    <div class="cat">{{ product.category }}</div>
+    {% for attachment in product.attachments.all %}
+        <img class="primary-img" src="{{ attachment.file.url }}">
+    {% endfor %}
+    <div class="desc">{{ product.description }}</div>
+
+</head>
+<body>
+</body>

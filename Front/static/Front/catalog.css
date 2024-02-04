@@ -1,0 +1,23 @@
+fieldset {
+    width: fit-content;
+}
+fieldset.product-card {
+    display: inline-block;
+    max-width: fit-content;
+    border-radius: 20px;
+    margin-bottom: 5px;
+    max-width: 150px;
+}
+fieldset.product-card img.primary-img {
+    max-width: 150px;
+}
+fieldset.product-card div.name {
+    max-width: inherit;
+
+}
+fieldset.product-card div.cat {
+    font-size: 12px;
+}
+a {
+    text-decoration: none;
+}
