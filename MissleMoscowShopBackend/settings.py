@@ -30,7 +30,7 @@ DEBUG = getenv('DEBUG', 0)
 ALLOWED_HOSTS = getenv('ALLOWED_HOSTS', '*').split(' ')
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
-SECURE_SSL_REDIRECT = True
+# SECURE_SSL_REDIRECT = True
 
 # Application definition
 
