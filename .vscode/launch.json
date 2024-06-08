@@ -6,14 +6,29 @@
     "configurations": [
         {
             "name": "Python: Django",
-            "type": "python",
+            "type": "debugpy",
             "request": "launch",
             "program": "${workspaceFolder}/manage.py",
             "args": [
-                "runserver", "0.0.0.0:8001"
+                // "runserver", "0.0.0.0:8001",
+                "runserver_plus",
+                "--cert-file", "selftest-cert",
+                "--key-file", "selftest-key",
+                "localhost:8443",
             ],
             "django": true,
             "justMyCode": true
+        },
+        {
+            "name": "gunicorn",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "gunicorn",
+            "args": [
+                "MissleMoscowShopBackend.wsgi:application",
+                "--bind",
+                "0.0.0.0:8000",
+            ]
         }
     ]
 }
