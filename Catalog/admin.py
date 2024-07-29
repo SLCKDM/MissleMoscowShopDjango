@@ -32,8 +32,6 @@ class ProductAdmin(admin.ModelAdmin):
     list_display = ["name", "article", "category", "available", "created_at", "updated_at"]
     fields = [
         "name",
-        "created_at",
-        "updated_at",
         "description",
         "article",
         "barcode",
