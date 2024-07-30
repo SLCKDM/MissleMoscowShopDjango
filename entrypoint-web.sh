@@ -20,4 +20,4 @@ python manage.py createsuperuser --noinput
 gunicorn MissleMoscowShopBackend.wsgi:application --bind 0.0.0.0:8000
 # python manage.py runserver 0.0.0.0:8000
 echo "Django is fully configured successfully and running."
-
+y | python3 manage.py collectstatic && python manage.py migrate && python manage.py createsuperuser --username admin --noinput --email zubashenkod@gmail.com
