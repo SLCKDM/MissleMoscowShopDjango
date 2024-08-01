@@ -20,4 +20,10 @@ done
 gunicorn MissleMoscowShopBackend.wsgi:application --bind 0.0.0.0:8000
 # python manage.py runserver 0.0.0.0:8000
 echo "Django is fully configured successfully and running."
-# y | python3 manage.py collectstatic && python manage.py migrate && python manage.py createsuperuser --no-input
+if [[ -z "${DO_MIGRATION}" ]]; then
+  y | python manage.py migrate
+fi
+if [[ -z "${DO_COLLECTSTATIC}" ]]; then
+  y | python3 manage.py collectstatic
+fi
+# python manage.py createsuperuser --no-input
