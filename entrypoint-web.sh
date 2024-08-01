@@ -15,9 +15,9 @@ while ! python manage.py migrate  2>&1; do
   sleep 3
 done
 # python ./backend/manage.py loaddata ./backend/recipes/TasksAPp/initial_data.json
-python manage.py createsuperuser --noinput
+# python manage.py createsuperuser --no-input
 # FOR DEBUG
 gunicorn MissleMoscowShopBackend.wsgi:application --bind 0.0.0.0:8000
 # python manage.py runserver 0.0.0.0:8000
 echo "Django is fully configured successfully and running."
-y | python3 manage.py collectstatic && python manage.py migrate && python manage.py createsuperuser --username admin --noinput --email zubashenkod@gmail.com
+# y | python3 manage.py collectstatic && python manage.py migrate && python manage.py createsuperuser --no-input

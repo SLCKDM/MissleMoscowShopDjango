@@ -12,4 +12,4 @@ RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
 RUN chmod +x ./entrypoint-web.sh
-RUN chmod +x ./entrypoint-web-test.sh
+# RUN chmod +x ./entrypoint-web-test.sh
