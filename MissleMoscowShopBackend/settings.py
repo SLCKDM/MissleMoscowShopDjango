@@ -29,7 +29,7 @@ DEBUG = getenv('DEBUG', 1)
 
 ALLOWED_HOSTS = getenv('ALLOWED_HOSTS', '*').split(' ')
 ADMIN_URL = getenv('ADMIN_URL', 'admin/')
-CSRF_TRUSTED_ORIGINS = [getenv('CSRF_TRUSTED_ORIGINS')]
+CSRF_TRUSTED_ORIGINS = [getenv('CSRF_TRUSTED_ORIGINS', 'http://*')]
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
 # SECURE_SSL_REDIRECT = True
@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'Catalog.apps.CatalogConfig',
     'Orders.apps.OrdersConfig',
+    'Customers.apps.CustomersConfig',
     'Front.apps.FrontConfig',
     "django_extensions",
 ]
