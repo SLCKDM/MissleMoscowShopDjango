@@ -6,7 +6,6 @@ from . import models
 class CustomerAdmin(admin.ModelAdmin):
     model = models.Customer
     fields = ['id', 'first_name', 'last_name', 'username']
-    readonly_fields = ['image_tag']
     
 admin.site.register(models.Customer, CustomerAdmin)
     
