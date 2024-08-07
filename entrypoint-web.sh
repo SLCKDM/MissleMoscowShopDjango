@@ -17,10 +17,6 @@ done
 # python ./backend/manage.py loaddata ./backend/recipes/TasksAPp/initial_data.json
 # FOR DEBUG
 echo "Django is fully configured successfully and running."
-if [[ -z "${DO_COLLECTSTATIC}" ]]; then
-  y | python3 manage.py collectstatic
-fi
-python3 manage.py createsuperuser --no-input
-# y | python3 manage.py collectstatic && python manage.py migrate
+# y | python manage.py migrate && python3 manage.py createsuperuser --no-input && python3 manage.py collectstatic
 gunicorn MissleMoscowShopBackend.wsgi:application --bind 0.0.0.0:8000
 # python manage.py runserver 0.0.0.0:8000
