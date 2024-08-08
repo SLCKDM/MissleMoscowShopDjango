@@ -17,7 +17,7 @@ class Category(models.Model):
         name (str): название категории; 
     """
     uuid = models.UUIDField(primary_key=True, default=uuid.uuid4, unique=True)
-    name = models.CharField(max_length=200)
+    name = models.CharField(max_length=200, verbose_name="Название")
 
     def __repr__(self):
         return f'<{self.__class__.__name__} {self.name}>'
@@ -35,8 +35,11 @@ class Attachment(models.Model):
         product (uuid): идентификатор связанного товара;
     """
     uuid = models.UUIDField(primary_key=True, default=uuid.uuid4, unique=True)
-    file = models.ImageField(upload_to="attachments/")
-    product = models.ForeignKey('Product', on_delete=models.CASCADE, related_name='attachments')
+    file = models.ImageField(upload_to="attachments/", verbose_name="Файл")
+    product = models.ForeignKey(
+        'Product', on_delete=models.CASCADE, related_name="attachments",
+        verbose_name="Товар"
+    )
 
     def __repr__(self):
         return f'<{self.__class__.__name__} {self.uuid}>'
@@ -66,13 +69,20 @@ class Product(models.Model):
         updated_at (datetime): дата и время обновления;
     """
     uuid = models.UUIDField(primary_key=True, default=uuid.uuid4, unique=True)
-    name = models.CharField(max_length=200, verbose_name='Название')
-    description = models.TextField(max_length=2000, null=True, blank=True)
-    article = models.CharField(max_length=200, blank=True, null=True)
-    barcode = models.CharField(max_length=50, blank=True, null=True)
-    category = models.ForeignKey(Category, null=True, blank=True, on_delete=models.SET_NULL, related_name='products')
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
+    name = models.CharField(max_length=200, verbose_name="Название")
+    description = models.TextField(
+        max_length=2000, null=True, blank=True, verbose_name="Описание"
+    )
+    article = models.CharField(
+        max_length=200, blank=True, null=True, verbose_name="Артикул")
+    barcode = models.CharField(
+        max_length=50, blank=True, null=True, verbose_name="Баркод")
+    category = models.ForeignKey(
+        Category, null=True, blank=True, on_delete=models.SET_NULL,
+        related_name='products', verbose_name="Категория"
+    )
+    created_at = models.DateTimeField(auto_now_add=True, verbose_name="Создан")
+    updated_at = models.DateTimeField(auto_now=True, verbose_name="Обновлён")
 
     def __repr__(self):
         return f'<{self.__class__.__name__} {self.name}>'
@@ -88,8 +98,10 @@ class Stock(models.Model):
         product (uuid): идентификатор товара;
         quantity (int): количество товара;
     """
-    product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='stocks')
-    quantity = models.IntegerField()
+    product = models.ForeignKey(
+        Product, on_delete=models.CASCADE, related_name='stocks', verbose_name="Товар"
+    )
+    quantity = models.IntegerField(verbose_name="Кол-во")
 
     def is_available(self) -> bool:
         """Проверка доступности (кол-во > 0) товара."""

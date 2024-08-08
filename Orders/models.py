@@ -53,12 +53,17 @@ class Order(models.Model):
     id = models.IntegerField(
         primary_key=True, unique=True, editable=False, auto_created=True
     )
-    name = models.IntegerField(unique=True, db_index=True)
-    customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
+    name = models.IntegerField(
+        unique=True, db_index=True, verbose_name="Название"
+    )
+    customer = models.ForeignKey(
+        Customer, on_delete=models.CASCADE, verbose_name="Покупатель"
+    )
+    created_at = models.DateTimeField(auto_now_add=True, verbose_name="Создан")
+    updated_at = models.DateTimeField(auto_now=True, verbose_name="Обновлён")
     status = models.CharField(
-        choices=Status.choices, default=Status.NEW, max_length=20
+        choices=Status.choices, default=Status.NEW, max_length=20,
+        verbose_name="Статус"
     )
     
     def __repr__(self):
@@ -82,11 +87,15 @@ class Position(models.Model):
     id = models.UUIDField(
         primary_key=True, unique=True, default=uuid.uuid4, editable=False
     )
-    quantity = models.IntegerField()
-    product = models.ForeignKey(Product, on_delete=models.PROTECT)
-    price = models.FloatField()
-    payed = models.BooleanField(default=False)
-    order = models.ForeignKey(Order, on_delete=models.CASCADE)
+    quantity = models.IntegerField(verbose_name="Кол-во")
+    product = models.ForeignKey(
+        Product, on_delete=models.PROTECT, verbose_name="Товар"
+    )
+    price = models.FloatField(verbose_name="Стоимость (за ед.)")
+    payed = models.BooleanField(default=False, verbose_name="Оплачен")
+    order = models.ForeignKey(
+        Order, on_delete=models.CASCADE, verbose_name="Заказ"
+    )
     
     def __repr__(self):
         return f'<{self.__class__.__name__} {self.product.name}>'
