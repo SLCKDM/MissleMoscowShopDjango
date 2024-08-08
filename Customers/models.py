@@ -13,4 +13,4 @@ class Customer(models.Model):
         return f'<{self.__class__.__name__} {self.username}>'
 
     def __str__(self):
-        return self.username
+        return str(self.username)
