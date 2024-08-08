@@ -10,7 +10,7 @@ class Customer(models.Model):
     language_code: str = models.CharField(max_length=5)
     
     def __repr__(self):
-        return f'<{self.__class__.__name__} {self.name}>'
+        return f'<{self.__class__.__name__} {self.username}>'
 
     def __str__(self):
-        return self.name
+        return self.username
