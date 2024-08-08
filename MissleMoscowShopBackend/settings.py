@@ -29,9 +29,9 @@ DEBUG = getenv('DEBUG', 1)
 
 ALLOWED_HOSTS = getenv('ALLOWED_HOSTS', '*').split(' ')
 ADMIN_URL = getenv('ADMIN_URL', 'admin/')
-CSRF_TRUSTED_ORIGINS = [getenv('CSRF_TRUSTED_ORIGINS', 'http://*')]
-SESSION_COOKIE_SECURE = True
-CSRF_COOKIE_SECURE = True
+CSRF_TRUSTED_ORIGINS = getenv('CSRF_TRUSTED_ORIGINS').split(' ')
+SESSION_COOKIE_SECURE = getenv("SESSION_COOKIE_SECURE", True)
+CSRF_COOKIE_SECURE = getenv("CSRF_COOKIE_SECURE", True)
 # SECURE_SSL_REDIRECT = True
 
 # Application definition
@@ -114,7 +114,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ru-ru'
 
 TIME_ZONE = 'UTC'
 
@@ -126,8 +126,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_URL = '/static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field

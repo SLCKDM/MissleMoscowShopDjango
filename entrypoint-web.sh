@@ -17,6 +17,10 @@ done
 # python ./backend/manage.py loaddata ./backend/recipes/TasksAPp/initial_data.json
 # FOR DEBUG
 echo "Django is fully configured successfully and running."
-# y | python manage.py migrate && python3 manage.py createsuperuser --no-input && python3 manage.py collectstatic
-gunicorn MissleMoscowShopBackend.wsgi:application --bind 0.0.0.0:8000
-# python manage.py runserver 0.0.0.0:8000
+python3 manage.py migrate  # might be useless
+python3 manage.py createsuperuser --no-input  # creates from env variables
+python3 manage.py collectstatic -c
+# gunicorn MissleMoscowShopBackend.wsgi:application --bind localhost:8000
+
+# for local run
+python3 manage.py runserver 0.0.0.0:8000
