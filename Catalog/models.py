@@ -66,7 +66,7 @@ class Product(models.Model):
         updated_at (datetime): дата и время обновления;
     """
     uuid = models.UUIDField(primary_key=True, default=uuid.uuid4, unique=True)
-    name = models.CharField(max_length=200)
+    name = models.CharField(max_length=200, verbose_name='Название')
     description = models.TextField(max_length=2000, null=True, blank=True)
     article = models.CharField(max_length=200, blank=True, null=True)
     barcode = models.CharField(max_length=50, blank=True, null=True)
