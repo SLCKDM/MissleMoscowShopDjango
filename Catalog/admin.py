@@ -5,6 +5,7 @@ from . import models
 
 
 class AttachmentStack(admin.StackedInline):
+    """Класс управления и отображения медиа в админ. панели товара"""
     exclude = ['uuid']
     fields = ['image_tag', 'file']
     readonly_fields = ['image_tag']
@@ -14,17 +15,20 @@ class AttachmentStack(admin.StackedInline):
 
 
 class AttachmentAdmin(admin.ModelAdmin):
+    """Класс управления медиа в админ. панели"""
     model = models.Attachment
     fields = ['image_tag', 'file']
     readonly_fields = ['image_tag']
 
 
 class CategoryAdmin(admin.ModelAdmin):
+    """Класс управления категориями в админ. панели"""
     model = models.Category
     fields = ['name']
 
 
 class ProductAdmin(admin.ModelAdmin):
+    """Класс управления товарами в админ. панели"""
     model = models.Product
     inlines = [
         AttachmentStack
@@ -52,6 +56,7 @@ class ProductAdmin(admin.ModelAdmin):
 
 
 class StockAdmin(admin.ModelAdmin):
+    """Класс управления остатками в админ. панели"""
     model = models.Stock
     # fields = []
 

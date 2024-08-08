@@ -10,6 +10,12 @@ import uuid
 
 
 class Category(models.Model):
+    """Категория товара.
+
+    Args:
+        uuid (uuid): идентифкатор категории;
+        name (str): название категории; 
+    """
     uuid = models.UUIDField(primary_key=True, default=uuid.uuid4, unique=True)
     name = models.CharField(max_length=200)
 
@@ -21,6 +27,13 @@ class Category(models.Model):
 
 
 class Attachment(models.Model):
+    """Медиа товаров.
+    
+    Args:
+        uuid (uuid): идентификатор;
+        file (str?): изображение;
+        product (uuid): идентификатор связанного товара;
+    """
     uuid = models.UUIDField(primary_key=True, default=uuid.uuid4, unique=True)
     file = models.ImageField(upload_to="attachments/")
     product = models.ForeignKey('Product', on_delete=models.CASCADE, related_name='attachments')
@@ -40,9 +53,18 @@ class Attachment(models.Model):
 
 
 class Product(models.Model):
-    '''
-    Товары
-    '''
+    """Товары
+    
+    Args:
+        uuid (uuid): идентификатор;
+        name (str): название;
+        description (str): описание;
+        article (str): артикул;
+        barcode (str): баркод;
+        category (int): категория;
+        created_at (datetime): дата и время создания;
+        updated_at (datetime): дата и время обновления;
+    """
     uuid = models.UUIDField(primary_key=True, default=uuid.uuid4, unique=True)
     name = models.CharField(max_length=200)
     description = models.TextField(max_length=2000, null=True, blank=True)
@@ -60,13 +82,17 @@ class Product(models.Model):
 
 
 class Stock(models.Model):
-    '''
-    Остаток товара
-    '''
+    """Остаток товара.
+    
+    Args:
+        product (uuid): идентификатор товара;
+        quantity (int): количество товара;
+    """
     product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='stocks')
     quantity = models.IntegerField()
 
     def is_available(self) -> bool:
+        """Проверка доступности (кол-во > 0) товара."""
         return self.quantity > 0
 
     def __repr__(self):
@@ -76,12 +102,28 @@ class Stock(models.Model):
         return f'<{self.__class__.__name__} {self.product} - {self.quantity}>'
 
     def decrease(self, q: int):
+        """Уменьшить количество товара на :q:.
+
+        Args:
+            q (int): вычитаемое.
+
+        Raises:
+            ValidationError: Если вычитаемое менее или равно 0.
+        """
         if self.quantity <= 0:
-            raise ValidationError('There is no fucking way to decrease product amount lesser than ZERO')
+            raise ValidationError('There is no fucking way to decrease product amount lesser than / equal ZERO')
         self.quantity = self.quantity - abs(q)
         self.save()
 
     def increase(self, q: int):
+        """Увеличить количество товара на :q:.
+
+        Args:
+            q (int): слагаемое.
+
+        Raises:
+            ValidationError: Если кол-во менее или равно 0.
+        """
         if q <= 0:
             raise ValidationError('Why wont you use `.decrease(q) method?`')
         self.quantity = self.quantity - abs(q)

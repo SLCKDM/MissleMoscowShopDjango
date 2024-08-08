@@ -5,6 +5,7 @@ from Orders.models import Position, Order
 # Register your models here.
 
 class PositionStack(admin.StackedInline):
+    """Класс отображения позиций в заказе в админ. панели"""
     exclude = ['id']
     model = Position
     fields = ['id', 'quantity', 'price', 'payed']
@@ -13,6 +14,7 @@ class PositionStack(admin.StackedInline):
     extra = 0
 
 class PositionAdmin(admin.ModelAdmin):
+    """Класс управления позициями в админ. панели"""
     model = Position
     list_display = ["product", "quantity", "price", "payed", "order"]
     list_filter = ["product", "price", "payed", "quantity"]
@@ -21,6 +23,7 @@ class PositionAdmin(admin.ModelAdmin):
 
 
 class OrderAdmin(admin.ModelAdmin):
+    """Класс управления заказами в админ. панели"""
     model = Order
     list_display = ["id", "name", "status", "created_at"]
     list_filter = ["created_at"]

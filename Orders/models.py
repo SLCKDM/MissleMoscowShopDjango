@@ -10,9 +10,27 @@ from Customers.models import Customer
 
 class Order(models.Model):
     """Класс заказа.
+    
+    Args:
+        id (int): идентификатор заказа;
+        name (int): название заказа;
+        customer (int): покупатель;
+        created_at (datetime): дата и время создания заказа;
+        updated_at (datetime): дата и время обновления заказа;
+        status (str): статус заказа;
     """
 
     class Status(models.TextChoices):
+        """Статус заказа.
+        
+        Args:
+            NEW: новый;
+            IN_PROGRESS: в процессе
+            ON_THE_WAY: в пути
+            DONE: доставлен
+            DECLINED: отменен
+            RETURNED: возвращен
+        """
         NEW = "new", _('Новый')
         IN_PROGRESS = "in_progress", _('В процессе')
         ON_THE_WAY = "on_the_way", _('В пути')
@@ -37,7 +55,7 @@ class Order(models.Model):
     )
     name = models.IntegerField(unique=True, db_index=True)
     customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
-    updated_at = models.DateTimeField(auto_now_add=True)
+    created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     status = models.CharField(
         choices=Status.choices, default=Status.NEW, max_length=20
@@ -51,7 +69,15 @@ class Order(models.Model):
 
 
 class Position(models.Model):
-    """Класс позиции заказа
+    """Класс позиции заказа.
+    
+    Args:
+        id (uuid): идентификатор позиции;
+        quantity (int): количество товара;
+        product (uuid): товар;
+        price (float): цена позиции (за единицу);
+        payed (bool): оплачен;
+        order (int): связанный заказ;
     """
     id = models.UUIDField(
         primary_key=True, unique=True, default=uuid.uuid4, editable=False
