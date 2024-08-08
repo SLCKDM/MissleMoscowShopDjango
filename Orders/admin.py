@@ -7,7 +7,7 @@ from Orders.models import Position, Order
 class PositionStack(admin.StackedInline):
     exclude = ['id']
     model = Position
-    fields = ['product.name', 'quantity', 'price', 'payed']
+    fields = ['id', 'quantity', 'price', 'payed']
     readonly_fields = ['quantity', 'price', 'payed']
     show_change_link = False
     extra = 0
@@ -16,6 +16,7 @@ class PositionAdmin(admin.ModelAdmin):
     model = Position
     list_display = ["product", "quantity", "price", "payed", "order"]
     list_filter = ["product", "price", "payed", "quantity"]
+    search_fields = ["order"]
     # inlines = ["order"]
 
 

@@ -37,7 +37,8 @@ class Order(models.Model):
     )
     name = models.IntegerField(unique=True, db_index=True)
     customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
-    created_at = models.DateTimeField(auto_now=True)
+    updated_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
     status = models.CharField(
         choices=Status.choices, default=Status.NEW, max_length=20
     )
@@ -46,7 +47,7 @@ class Order(models.Model):
         return f'<{self.__class__.__name__} {self.name}>'
 
     def __str__(self):
-        return self.name
+        return str(self.name)
 
 
 class Position(models.Model):

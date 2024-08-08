@@ -29,7 +29,7 @@ DEBUG = getenv('DEBUG', 1)
 
 ALLOWED_HOSTS = getenv('ALLOWED_HOSTS', '*').split(' ')
 ADMIN_URL = getenv('ADMIN_URL', 'admin') + '/'
-CSRF_TRUSTED_ORIGINS = getenv('CSRF_TRUSTED_ORIGINS').split(' ')
+CSRF_TRUSTED_ORIGINS = getenv('CSRF_TRUSTED_ORIGINS', 'https://localhost').split(' ')
 SESSION_COOKIE_SECURE = getenv("SESSION_COOKIE_SECURE", True)
 CSRF_COOKIE_SECURE = getenv("CSRF_COOKIE_SECURE", True)
 # SECURE_SSL_REDIRECT = True
