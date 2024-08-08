@@ -19,6 +19,10 @@ class Customer(models.Model):
     username: str = models.CharField(max_length=50, verbose_name="Юзернейм")
     language_code: str = models.CharField(max_length=5, verbose_name="Язык (код)")
     
+    class Meta:
+        verbose_name = "Покупатель"
+        verbose_name_plural = "Покупатели"
+    
     def __repr__(self):
         return f'<{self.__class__.__name__} {self.username}>'
 

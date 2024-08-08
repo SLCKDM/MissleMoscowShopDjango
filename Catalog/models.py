@@ -19,6 +19,10 @@ class Category(models.Model):
     uuid = models.UUIDField(primary_key=True, default=uuid.uuid4, unique=True)
     name = models.CharField(max_length=200, verbose_name="Название")
 
+    class Meta:
+        verbose_name = "Категория"
+        verbose_name_plural = "Категории"
+
     def __repr__(self):
         return f'<{self.__class__.__name__} {self.name}>'
 
@@ -40,6 +44,10 @@ class Attachment(models.Model):
         'Product', on_delete=models.CASCADE, related_name="attachments",
         verbose_name="Товар"
     )
+
+    class Meta:
+        verbose_name = "Фото"
+        verbose_name_plural = "Фото"
 
     def __repr__(self):
         return f'<{self.__class__.__name__} {self.uuid}>'
@@ -84,6 +92,10 @@ class Product(models.Model):
     created_at = models.DateTimeField(auto_now_add=True, verbose_name="Создан")
     updated_at = models.DateTimeField(auto_now=True, verbose_name="Обновлён")
 
+    class Meta:
+        verbose_name = "Товар"
+        verbose_name_plural = "Товары"
+
     def __repr__(self):
         return f'<{self.__class__.__name__} {self.name}>'
 
@@ -102,6 +114,10 @@ class Stock(models.Model):
         Product, on_delete=models.CASCADE, related_name='stocks', verbose_name="Товар"
     )
     quantity = models.IntegerField(verbose_name="Кол-во")
+
+    class Meta:
+        verbose_name = "Остаток"
+        verbose_name_plural = "Остатки"
 
     def is_available(self) -> bool:
         """Проверка доступности (кол-во > 0) товара."""

@@ -65,7 +65,11 @@ class Order(models.Model):
         choices=Status.choices, default=Status.NEW, max_length=20,
         verbose_name="Статус"
     )
-    
+
+    class Meta:
+        verbose_name = "Заказ"
+        verbose_name_plural = "Заказы"
+
     def __repr__(self):
         return f'<{self.__class__.__name__} {self.name}>'
 
@@ -96,7 +100,11 @@ class Position(models.Model):
     order = models.ForeignKey(
         Order, on_delete=models.CASCADE, verbose_name="Заказ"
     )
-    
+
+    class Meta:
+        verbose_name = "Позиция заказа"
+        verbose_name_plural = "Позиции заказов"
+
     def __repr__(self):
         return f'<{self.__class__.__name__} {self.product.name}>'
 
