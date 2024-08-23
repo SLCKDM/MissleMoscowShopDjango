@@ -10,19 +10,21 @@
     </script>
 </head>
 <body>
-    {% for product in products %}
-    <fieldset class="product-card">
-        <a href="catalog/{{product.uuid}}">
-            {% for attachment in product.attachments.all %}
-                <img class="primary-img" src="{{ attachment.file.url }}">
-            {% endfor %}
-            {% if product.category %}
-                <div class="cat">{{ product.category }}</div>
-            {% endif %}
-            <div class="name">{{ product.name }}</div>
-        </a>
-    </fieldset>
-    {% endfor %}
+    <div class="products-list">
+        {% for product in products %}
+        <fieldset class="product-card">
+            <a href="catalog/{{product.uuid}}">
+                {% for attachment in product.attachments.all %}
+                    <img class="primary-img" src="{{ attachment.file.url }}">
+                {% endfor %}
+                {% if product.category %}
+                    <div class="cat">{{ product.category }}</div>
+                {% endif %}
+                <div class="name">{{ product.name }}</div>
+            </a>
+        </fieldset>
+        {% endfor %}
+    </div>
 
 
     <div class="pagination">
