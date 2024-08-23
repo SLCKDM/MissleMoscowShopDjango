@@ -5,25 +5,27 @@ fieldset {
     font-family: sans-serif;
 }
 fieldset.product-card {
+    max-width: 100%;
     display: inline-block;
-    max-width: fit-content;
     border-radius: 20px;
     padding-bottom: 5px;
     margin-bottom: 5px;
-    max-width: 150px;
+    max-width: 48%;
+}
+fieldset.product-card::hover {
+    background: var(--tg-theme-button-color)
 }
 fieldset.product-card img.primary-img {
-    max-width: 150px;
+    max-width: 100%;
     border-radius: 15px;
 }
 fieldset.product-card div.name {
-    max-width: inherit;
-    padding-top: 2.5px;
     padding-left: 10px;
     color: var(--tg-theme-text-color)
 }
 fieldset.product-card div.cat {
     font-size: 12px;
+    padding-top: 3.5px;
     padding-left: 10px;
     color: var(--tg-theme-subtitle-text-color);
 }
