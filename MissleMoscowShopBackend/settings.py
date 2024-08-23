@@ -87,7 +87,7 @@ WSGI_APPLICATION = 'MissleMoscowShopBackend.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'datab.sqlite3',
+        'NAME': BASE_DIR / 'DB.sqlite3',
     }
 }
 

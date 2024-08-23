@@ -1,0 +1,23 @@
+.card {
+    font-family: sans-serif;
+}
+
+img {
+    width: -webkit-fill-available;
+}
+
+.name {
+    color: var(--tg-theme-text-color);
+}
+
+.cat {
+    color: var(--tg-theme-subtitle-text-color);
+}
+
+.back-button {
+    background: var(--tg-theme-button-color);
+    color: var(--tg-theme-button-text-color);
+    border-radius: 5px;
+    padding: 2px;
+    font-family: sans-serif;
+}

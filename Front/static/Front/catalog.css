@@ -1,22 +1,31 @@
 fieldset {
     width: fit-content;
+    padding: 0px;
+    border: none;
+    font-family: sans-serif;
 }
 fieldset.product-card {
     display: inline-block;
     max-width: fit-content;
     border-radius: 20px;
+    padding-bottom: 5px;
     margin-bottom: 5px;
     max-width: 150px;
 }
 fieldset.product-card img.primary-img {
     max-width: 150px;
+    border-radius: 15px;
 }
 fieldset.product-card div.name {
     max-width: inherit;
-
+    padding-top: 2.5px;
+    padding-left: 10px;
+    color: var(--tg-theme-text-color)
 }
 fieldset.product-card div.cat {
     font-size: 12px;
+    padding-left: 10px;
+    color: var(--tg-theme-subtitle-text-color);
 }
 a {
     text-decoration: none;
