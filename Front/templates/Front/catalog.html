@@ -16,10 +16,10 @@
             {% for attachment in product.attachments.all %}
                 <img class="primary-img" src="{{ attachment.file.url }}">
             {% endfor %}
-            <div class="name">{{ product.name }}</div>
             {% if product.category %}
                 <div class="cat">{{ product.category }}</div>
             {% endif %}
+            <div class="name">{{ product.name }}</div>
         </a>
     </fieldset>
     {% endfor %}
