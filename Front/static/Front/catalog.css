@@ -12,8 +12,11 @@ fieldset.product-card {
     margin-bottom: 5px;
     max-width: 48%;
 }
-fieldset.product-card::hover {
-    background: var(--tg-theme-button-color)
+fieldset.product-card:hover .name{
+    color: var(--tg-theme-button-text-color);
+}
+fieldset.product-card:hover{
+    background: var(--tg-theme-button-color);
 }
 fieldset.product-card img.primary-img {
     max-width: 100%;
@@ -21,10 +24,11 @@ fieldset.product-card img.primary-img {
 }
 fieldset.product-card div.name {
     padding-left: 10px;
-    color: var(--tg-theme-text-color)
+    color: var(--tg-theme-text-color);
+    font-size: 100%;
 }
 fieldset.product-card div.cat {
-    font-size: 12px;
+    font-size: 80%;
     padding-top: 3.5px;
     padding-left: 10px;
     color: var(--tg-theme-subtitle-text-color);

@@ -14,13 +14,13 @@
     </div>
     </br>
     <div class="card">
-        <div class="name-block">
-            <div class="name">{{ product.name }}</div>
-        </div>
         <div class="category-block">
             {% if product.category %}
                 <div class="cat">{{ product.category }}</div>
             {% endif %}
+        </div>
+        <div class="name-block">
+            <div class="name">{{ product.name }}</div>
         </div>
         <div class="attachment-block">
             {% for attachment in product.attachments.all %}
