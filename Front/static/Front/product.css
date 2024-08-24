@@ -37,3 +37,10 @@ img {
     text-decoration: none;
     color: var(--tg-theme-button-text-color);
 }
+
+.desc {
+    padding-left: 1vw;
+    padding-top: 1vw;
+    color: var(--tg-theme-text-color);
+    font-size: 5vw;
+}
