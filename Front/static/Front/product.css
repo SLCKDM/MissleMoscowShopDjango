@@ -25,9 +25,9 @@ img {
 .back-button {
     background: var(--tg-theme-button-color);
     color: var(--tg-theme-button-text-color);
-    border-radius: 5px 15px 15px 5px;
+    border-radius: 0% 100vw 100vw 0%;
     padding: 3px;
-    padding-right: 10px;
+    padding-right: 3vw;
     font-family: sans-serif;
     font-size: 7vw;
     width: max-content;
