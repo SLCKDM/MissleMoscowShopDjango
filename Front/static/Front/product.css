@@ -9,13 +9,13 @@ img {
 
 .name {
     color: var(--tg-theme-text-color);
-    font-size: 23px;
+    font-size: 9vw;
     padding-bottom: 7.5px;
 }
 
 .cat {
     color: var(--tg-theme-subtitle-text-color);
-    font-size: 15px;
+    font-size: 4vw;
 }
 
 .name, .cat {
@@ -29,6 +29,7 @@ img {
     padding: 3px;
     padding-right: 10px;
     font-family: sans-serif;
+    font-size: 7vw;
     width: max-content;
 }
 

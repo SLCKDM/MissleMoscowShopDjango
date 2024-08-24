@@ -25,12 +25,13 @@ fieldset.product-card img.primary-img {
 fieldset.product-card div.name {
     padding-left: 10px;
     color: var(--tg-theme-text-color);
-    font-size: 100%;
+    font-size: 4.5vw;
 }
 fieldset.product-card div.cat {
-    font-size: 80%;
+    font-size: 3vw;
     padding-top: 3.5px;
     padding-left: 10px;
+    max-height: 2.8vw;
     color: var(--tg-theme-subtitle-text-color);
 }
 a {
