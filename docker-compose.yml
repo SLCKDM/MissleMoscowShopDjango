@@ -1,6 +1,7 @@
 version: "3"
 
 services:
+
   backend:
     build: .
     # command: gunicorn MissleMoscowShopBackend.wsgi:application --bind 0.0.0.0:8000
@@ -8,3 +9,28 @@ services:
     entrypoint: ./entrypoint-web.sh
     ports:
       - 8000:8000
+    depends_on:
+      - postgres
+    networks:
+      - no-internet
+      - has-internet
+  postgres:
+    image: postgres:16
+    environment:
+      - POSTGRES_DB=test_db
+      - POSTGRES_USER=test_user
+      - POSTGRES_PASSWORD=test_password
+      - POSTGRES_HOST=postgres
+      - POSTGRES_PORT=5432
+    ports:
+      - "5432:5432"
+    networks:
+      - no-internet
+
+networks:
+  no-internet:
+    driver: bridge
+    external: true
+  has-internet:
+    driver: host
+    external: true
