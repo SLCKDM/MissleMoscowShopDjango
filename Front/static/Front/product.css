@@ -3,6 +3,11 @@
     width: 100%;
 }
 
+.primary-img {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
 img {
     width: -webkit-fill-available;
     margin: auto;

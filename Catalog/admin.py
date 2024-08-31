@@ -4,15 +4,14 @@ from . import models
 # Register your models here.
 
 
-class AttachmentStack(admin.StackedInline):
+class AttachmentStack(admin.TabularInline):
     """Класс управления и отображения медиа в админ. панели товара"""
     exclude = ['uuid']
-    fields = ['image_tag', 'file']
+    fields = ['uuid', 'image_tag', 'file', 'primary']
     readonly_fields = ['image_tag']
     model = models.Attachment
     show_change_link = True
     extra = 0
-
 
 class AttachmentAdmin(admin.ModelAdmin):
     """Класс управления медиа в админ. панели"""
@@ -53,6 +52,10 @@ class ProductAdmin(admin.ModelAdmin):
 
     def available(self, instance):
         return sum([stock.quantity for stock in instance.stocks.all()])
+
+    # def save_formset(self, request, form, formset, change):
+    #     instances = formset.save()
+
 
 
 class StockAdmin(admin.ModelAdmin):

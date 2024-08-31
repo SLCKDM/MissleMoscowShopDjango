@@ -14,7 +14,7 @@ class Category(models.Model):
 
     Args:
         uuid (uuid): идентифкатор категории;
-        name (str): название категории; 
+        name (str): название категории;
     """
     uuid = models.UUIDField(primary_key=True, default=uuid.uuid4, unique=True)
     name = models.CharField(max_length=200, verbose_name="Название")
@@ -32,7 +32,7 @@ class Category(models.Model):
 
 class Attachment(models.Model):
     """Медиа товаров.
-    
+
     Args:
         uuid (uuid): идентификатор;
         file (str?): изображение;
@@ -44,6 +44,7 @@ class Attachment(models.Model):
         'Product', on_delete=models.CASCADE, related_name="attachments",
         verbose_name="Товар"
     )
+    primary = models.BooleanField(verbose_name='Главная', null=True, blank=True)
 
     class Meta:
         verbose_name = "Фото"
@@ -59,13 +60,14 @@ class Attachment(models.Model):
         if not self.file:
             return ''
         return mark_safe('<img src="/media/%s" width="150" height="150" />' % (self.file))
+
     image_tag.short_description = 'Image'
     image_tag.allow_tags = True
 
 
 class Product(models.Model):
     """Товары
-    
+
     Args:
         uuid (uuid): идентификатор;
         name (str): название;
@@ -102,10 +104,25 @@ class Product(models.Model):
     def __str__(self):
         return f'<{self.__class__.__name__} {self.name}>'
 
+    def primary_image(self):
+        """Получить главное изображение.
+        Ищет инстанс ``Attachment`` у которого значение
+        атрибута ``primary==True``.
+        - Если несколько - возвращет первый;
+        - Если ни одного ``primary==True``, но есть ``Attachments`` - возвращает первый из них;
+        - Если ``Attachments`` остсутствуют - None.
+        """
+        primaries = self.attachments.filter(primary=True)
+        if primaries:
+            primary = primaries[0]
+        else:
+            primary = self.attachments.first()
+        return primary
+
 
 class Stock(models.Model):
     """Остаток товара.
-    
+
     Args:
         product (uuid): идентификатор товара;
         quantity (int): количество товара;
