@@ -1,0 +1,22 @@
+.navbar {
+    background: cyan;
+    font-size: 4vmax;
+    max-width:fit-content;
+    display: block;
+}
+
+.navbar ul {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    background: red;
+    text-decoration: none;
+    list-style: none;
+    padding-inline: 20px
+}
+
+#menu-btn {
+    font-size: 4vmax;
+}
