@@ -5,9 +5,9 @@
     display: block;
 }
 
-.navbar ul#navbar-list {
+#navbarList {
     display: none;
-    border: solid 1px yellow;
+    border: solid 1px var(--tg-theme-button-color);
     border-radius: 0 4vw 4vw 0;
     background: var(--tg-theme-bg-color);
     margin: 0;
@@ -23,7 +23,7 @@
     text-decoration: none;
     color: white;
 }
-#menu-btn {
+#menuBtn {
     font-size: 4vmax;
     background-color: var(--tg-theme-button-color);
     color: var(--tg-theme-button-text-color);
