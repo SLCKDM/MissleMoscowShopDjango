@@ -6,7 +6,7 @@
 }
 
 .navbar ul#navbar-list {
-    /* display: none; */
+    display: none;
     border: solid 1px yellow;
     border-radius: 0 4vw 4vw 0;
     background: var(--tg-theme-bg-color);
