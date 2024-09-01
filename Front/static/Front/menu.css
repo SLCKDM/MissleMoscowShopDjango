@@ -1,23 +1,38 @@
 .navbar {
-    background: cyan;
+    font-family: sans-serif;
     font-size: 4vmax;
     max-width:fit-content;
     display: block;
 }
 
-.navbar ul {
-    display: none;
+.navbar ul#navbar-list {
+    /* display: none; */
+    border: solid 1px yellow;
+    border-radius: 0 4vw 4vw 0;
+    background: var(--tg-theme-bg-color);
     margin: 0;
     padding: 0;
 }
 
 .navbar ul li {
-    background: red;
-    text-decoration: none;
+    color: white;
     list-style: none;
-    padding-inline: 20px
+    padding-right: 10px;
 }
-
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+}
 #menu-btn {
     font-size: 4vmax;
+    background-color: var(--tg-theme-button-color);
+    color: var(--tg-theme-button-text-color);
+    border-radius: 0 4vw 4vw 0;
+    border: solid 0px
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
 }
