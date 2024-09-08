@@ -27,7 +27,7 @@ class Category(models.Model):
         return f'<{self.__class__.__name__} {self.name}>'
 
     def __str__(self):
-        return self.name
+        return str(self.name)
 
 
 class Attachment(models.Model):
@@ -39,7 +39,8 @@ class Attachment(models.Model):
         product (uuid): идентификатор связанного товара;
     """
     uuid = models.UUIDField(primary_key=True, default=uuid.uuid4, unique=True)
-    file = models.ImageField(upload_to="attachments/", verbose_name="Файл")
+    # file = models.ImageField(upload_to="attachments/", verbose_name="Файл")
+    file = models.FileField(verbose_name="Файл")
     product = models.ForeignKey(
         'Product', on_delete=models.CASCADE, related_name="attachments",
         verbose_name="Товар"
@@ -57,9 +58,10 @@ class Attachment(models.Model):
         return f'<{self.__class__.__name__} {self.uuid}>'
 
     def image_tag(self):
+        """Получить тег изображения."""
         if not self.file:
             return ''
-        return mark_safe('<img src="/media/%s" width="150" height="150" />' % (self.file))
+        return mark_safe('<img src="%s" width="150" height="150" />' % (self.file.url))
 
     image_tag.short_description = 'Image'
     image_tag.allow_tags = True

@@ -13,6 +13,7 @@ class AttachmentStack(admin.TabularInline):
     show_change_link = True
     extra = 0
 
+
 class AttachmentAdmin(admin.ModelAdmin):
     """Класс управления медиа в админ. панели"""
     model = models.Attachment
@@ -55,7 +56,6 @@ class ProductAdmin(admin.ModelAdmin):
 
     # def save_formset(self, request, form, formset, change):
     #     instances = formset.save()
-
 
 
 class StockAdmin(admin.ModelAdmin):
