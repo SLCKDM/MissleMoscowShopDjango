@@ -48,7 +48,6 @@ INSTALLED_APPS = [
     'Customers.apps.CustomersConfig',
     'Front.apps.FrontConfig',
     "django_extensions",
-    "storages",
 ]
 
 MIDDLEWARE = [
@@ -87,12 +86,8 @@ WSGI_APPLICATION = 'MissleMoscowShopBackend.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': getenv('POSTGRES_NAME'),
-        'USER': getenv('POSTGRES_USER'),
-        'PASSWORD': getenv('POSTGRES_PASSWORD'),
-        'HOST': getenv('POSTGRES_HOST'),
-        'PORT': getenv('POSTGRES_PORT', '5432'),
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'DB.sqlite3',
     }
 }
 
@@ -141,11 +136,3 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
-
-DEFAULT_FILE_STORAGE = 'MissleMoscowShopBackend.s3_storage.MediaStorage'
-STATICFILES_STORAGE = 'MissleMoscowShopBackend.s3_storage.StaticStorage'
-AWS_S3_ENDPOINT_URL = getenv('S3_ENDPOINT_URL')
-AWS_S3_ACCESS_KEY_ID = getenv('S3_ACCESS_KEY_ID')
-AWS_S3_SECRET_ACCESS_KEY = getenv('S3_SECRET_ACCESS_KEY')
-AWS_QUERYSTRING_AUTH = getenv('QUERYSTRING_AUT')
-
