@@ -5,7 +5,6 @@ fieldset {
     font-family: sans-serif;
 }
 fieldset.product-card {
-    max-width: 100%;
     display: inline-block;
     border-radius: 20px;
     padding-bottom: 5px;
@@ -19,16 +18,16 @@ fieldset.product-card:hover{
     background: var(--tg-theme-button-color);
 }
 fieldset.product-card img.primary-img {
-    max-width: 100%;
+    max-width: 50vmin;
     border-radius: 15px;
 }
 fieldset.product-card div.name {
     padding-left: 10px;
     color: var(--tg-theme-text-color);
-    font-size: 4.5vw;
+    font-size: 5vmin;
 }
 fieldset.product-card div.cat {
-    font-size: 3vw;
+    font-size: 3vmin;
     padding-top: 3.5px;
     padding-left: 10px;
     max-height: 2.8vw;
