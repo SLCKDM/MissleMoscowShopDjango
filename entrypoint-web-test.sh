@@ -15,12 +15,8 @@ while ! python manage.py migrate  2>&1; do
   sleep 3
 done
 # python ./backend/manage.py loaddata ./backend/recipes/TasksAPp/initial_data.json
-# FOR DEBUG
-echo "Django is fully configured successfully and running."
-python3 manage.py migrate  # might be useless
-python3 manage.py createsuperuser --no-input  # creates from env variables
-python3 manage.py collectstatic -c
-# gunicorn MissleMoscowShopBackend.wsgi:application --bind localhost:8000
+python manage.py loaddata fixtures/data.json
 
-# for local run
-python3 manage.py runserver 0.0.0.0:8000
+# FOR DEBUG
+python manage.py runserver 0.0.0.0:8000
+echo "Django is fully configured successfully and running."
