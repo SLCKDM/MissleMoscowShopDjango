@@ -30,7 +30,3 @@ class ProductDetailView(DetailView):
 # Create your views here.
 def index(request):
     return render(request, 'Front/index.html')
-
-
-def faq(request):
-    return render(request, 'Front/faq.html')
