@@ -10,14 +10,13 @@
     </script>
 </head>
 <body>
-    {% include 'Front/menu.html' %}
     <div class="products-list">
         {% for product in products %}
         <fieldset class="product-card">
             <a href="catalog/{{product.uuid}}">
-                {% if product.primary_image %}
-                    <img class="primary-img" src="{{ product.primary_image.file.url }}">
-                {% endif %}
+                {% for attachment in product.attachments.all %}
+                    <img class="primary-img" src="{{ attachment.file.url }}">
+                {% endfor %}
                 {% if product.category %}
                     <div class="cat">{{ product.category }}</div>
                 {% endif %}
