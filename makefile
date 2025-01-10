@@ -3,3 +3,5 @@ dcu:
 	docker network create has-internet
 	docker network create no-internet
 	docker compose up --build -d
+
+# test 2
